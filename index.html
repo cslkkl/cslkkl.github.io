@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KKLCSL · 沿着问题找路，把每次尝试留在代码里</title>
+<meta name="description" content="KKLCSL 的个人主页：DeepSeek Harness 插件与前端可视化作品。">
+<style>
+  :root{
+    --paper:#FBF6EC;
+    --ink:#3B3227;
+    --ink-2:#6E6151;
+    --ink-3:#A08F76;
+    --amber:#E2A32B;
+    --line:#E6DCC9;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:"Segoe UI","Microsoft YaHei",system-ui,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1100px;margin:0 auto;padding:0 40px}
+
+  header{display:flex;align-items:center;justify-content:space-between;padding:22px 0}
+  .brand{display:flex;align-items:center;gap:10px;font-size:15px;letter-spacing:.28em;color:var(--ink)}
+  .brand svg{width:17px;height:17px;opacity:.85}
+  nav{display:flex;gap:30px;font-size:14px}
+  nav a{color:var(--ink-2);text-decoration:none;letter-spacing:.06em;transition:color .18s ease}
+  nav a:hover{color:var(--amber)}
+
+  .hero{
+    display:grid;grid-template-columns:1fr 400px;gap:64px;align-items:center;
+    padding:28px 0 76px;
+  }
+  .handle{font-size:12.5px;letter-spacing:.30em;text-transform:uppercase;color:var(--ink-3);margin:0 0 20px}
+  h1{font-size:76px;font-weight:300;letter-spacing:.24em;line-height:1;margin:0 0 24px}
+  .rule{width:68px;height:4px;background:var(--amber);border-radius:3px;margin:0 0 24px}
+  .claim{font-size:24px;line-height:1.65;color:var(--ink-2);margin:0 0 12px;letter-spacing:.04em}
+  .sub{font-size:14.5px;color:var(--ink-3);margin:0 0 34px;letter-spacing:.05em}
+  .actions{display:flex;gap:12px;flex-wrap:wrap}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:999px;
+    font-size:14px;letter-spacing:.06em;text-decoration:none;
+    transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease, color .18s ease;
+  }
+  .btn-primary{background:var(--ink);color:#FCF8F0}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(59,50,39,.18)}
+  .btn-ghost{border:1px solid var(--line);color:var(--ink-2);background:rgba(255,255,255,.4)}
+  .btn-ghost:hover{border-color:var(--amber);color:var(--amber)}
+
+  .hero-art{
+    aspect-ratio:1/1;border-radius:28px;overflow:hidden;
+    border:1px solid #F0E7D5;
+    box-shadow:0 22px 50px rgba(128,102,64,.10);
+  }
+  .hero-art img{width:100%;height:100%;display:block;object-fit:cover}
+
+  .pawline{display:flex;align-items:center;gap:16px;margin:0 0 52px}
+  .pawline .bar{flex:1;height:1px;background:var(--line)}
+  .pawline svg{opacity:.55}
+
+  .sec-title{font-size:12.5px;letter-spacing:.30em;text-transform:uppercase;color:var(--ink-3);margin:0 0 10px}
+  .card{
+    display:grid;grid-template-columns:1fr 190px;gap:32px;align-items:start;
+    padding:32px 0;border-top:1px solid var(--line);
+    text-decoration:none;color:inherit;
+  }
+  .card:last-of-type{border-bottom:1px solid var(--line)}
+  .card:hover h2{color:var(--amber)}
+  .card h2{font-size:24px;font-weight:500;margin:0 0 10px;letter-spacing:.01em;transition:color .18s ease}
+  .card p{margin:0;font-size:15px;line-height:1.85;color:var(--ink-2)}
+  .meta{font-size:12.5px;color:var(--ink-3);text-align:right;line-height:1.95;letter-spacing:.04em}
+
+  footer{padding:60px 0 48px;text-align:center;color:var(--ink-3);font-size:13px;letter-spacing:.10em}
+  footer svg{width:22px;height:22px;opacity:.45;margin-bottom:12px}
+
+  @media (max-width:920px){
+    .wrap{padding:0 24px}
+    .hero{grid-template-columns:1fr;gap:36px;padding:16px 0 56px}
+    .hero-art{max-width:360px}
+    h1{font-size:52px}
+    .claim{font-size:20px}
+    .card{grid-template-columns:1fr;gap:8px}
+    .meta{text-align:left}
+    nav{display:none}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="brand">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <ellipse cx="12" cy="16" rx="6" ry="5"/>
+        <circle cx="5.5" cy="9.5" r="2.4"/><circle cx="10" cy="6.8" r="2.4"/>
+        <circle cx="14.6" cy="6.8" r="2.4"/><circle cx="18.8" cy="9.5" r="2.4"/>
+      </svg>
+      KKLCSL
+    </div>
+    <nav>
+      <a href="#work">作品</a>
+      <a href="https://github.com/cslkkl">GitHub</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="handle">toolboxonline.online</p>
+        <h1>KKLCSL</h1>
+        <div class="rule"></div>
+        <p class="claim">沿着问题找路，<br>把每次尝试留在代码里。</p>
+        <p class="sub">DeepSeek Harness 插件 · 前端可视化</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://github.com/cslkkl">GitHub →</a>
+          <a class="btn btn-ghost" href="#work">看看作品</a>
+        </div>
+      </div>
+      <div class="hero-art">
+        <img src="dog.jpg" alt="手绘小狗插画" width="900" height="900">
+      </div>
+    </section>
+
+    <div class="pawline">
+      <span class="bar"></span>
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="#C9B79A" aria-hidden="true">
+        <ellipse cx="12" cy="16" rx="6" ry="5"/>
+        <circle cx="5.5" cy="9.5" r="2.4"/><circle cx="10" cy="6.8" r="2.4"/>
+        <circle cx="14.6" cy="6.8" r="2.4"/><circle cx="18.8" cy="9.5" r="2.4"/>
+      </svg>
+      <span class="bar"></span>
+    </div>
+
+    <section id="work">
+      <p class="sec-title">作品</p>
+
+      <a class="card" href="https://github.com/cslkkl/discography-showcase">
+        <div>
+          <h2>声之年轮 · discography-showcase</h2>
+          <p>把一位歌手的完整录音室目录做成唱片年轮：8 位歌手、1104 首曲目、14 个展示面、官方 30 秒试听、全屏歌词舞台。零依赖、零构建、可离线。</p>
+        </div>
+        <div class="meta">静态站 · JavaScript<br>MIT</div>
+      </a>
+
+      <a class="card" href="https://github.com/cslkkl/dsh-cpa-switch">
+        <div>
+          <h2>dsh-cpa-switch</h2>
+          <p>在 DeepSeek Harness 里管理 CLIProxyAPI 的账号——看余额、签到、跑任务、切账号，不用再开网页控制台。装完即用。</p>
+        </div>
+        <div class="meta">DSH 插件 · TypeScript<br>npm 0.15.1</div>
+      </a>
+
+      <a class="card" href="https://github.com/cslkkl/dsh-web-annotator">
+        <div>
+          <h2>dsh-web-annotator</h2>
+          <p>在 DSH 原有的 Browser 标签页里点选或框选网页，就地写评论、向当前 Agent 提问，再把标记截图或 DOM 定位发给会话。</p>
+        </div>
+        <div class="meta">DSH 插件 · TypeScript<br>npm 0.2.2</div>
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <svg viewBox="0 0 24 24" fill="#C9B79A" aria-hidden="true">
+      <ellipse cx="12" cy="16" rx="6" ry="5"/>
+      <circle cx="5.5" cy="9.5" r="2.4"/><circle cx="10" cy="6.8" r="2.4"/>
+      <circle cx="14.6" cy="6.8" r="2.4"/><circle cx="18.8" cy="9.5" r="2.4"/>
+    </svg>
+    <div>Keep sniffing, keep shipping.</div>
+  </footer>
+
+</div>
+</body>
+</html>
