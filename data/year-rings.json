@@ -1,0 +1,289 @@
+{
+  "artist": "周杰倫",
+  "artistEn": "Jay Chou",
+  "artistSimplified": "周杰伦",
+  "source": {
+    "project": "discography-showcase（声之年轮）",
+    "albums": "js/data.js → ARTISTS[\"jay-chou\"] → var ALBUMS",
+    "rawFacts": "_data/artists/jay-chou/albums-raw.json",
+    "editorial": "_data/artists/jay-chou/meta.mjs",
+    "colors": "_data/artists/jay-chou/colors.json",
+    "colorAlgorithm": "js/app.js lift(a.sourceAvg, 0.22)；sourceAvg = colors.json avg（build.mjs:272）",
+    "ringGeometry": "js/app.js renderRings()：R0=88, STEP=27, w=7+(trackCount-10)*2（app.js:1049-1060）"
+  },
+  "rings": [
+    {
+      "id": "jay2000",
+      "no": "01",
+      "year": 2000,
+      "album": "Jay",
+      "albumEn": "Jay",
+      "tracks": 10,
+      "sourceAvg": "#72615B",
+      "colorsJsonAvg": "#72615B",
+      "color": "#8e807a",
+      "ring": {
+        "r": 88,
+        "strokeWidth": 7,
+        "cx": 500,
+        "cy": 500
+      }
+    },
+    {
+      "id": "fantasy2001",
+      "no": "02",
+      "year": 2001,
+      "album": "范特西",
+      "albumEn": "Fantasy",
+      "tracks": 10,
+      "sourceAvg": "#823A2A",
+      "colorsJsonAvg": "#823A2A",
+      "color": "#9b6254",
+      "ring": {
+        "r": 115,
+        "strokeWidth": 7,
+        "cx": 500,
+        "cy": 500
+      }
+    },
+    {
+      "id": "eight2002",
+      "no": "03",
+      "year": 2002,
+      "album": "八度空間",
+      "albumEn": "The Eight Dimensions",
+      "tracks": 10,
+      "sourceAvg": "#7C6348",
+      "colorsJsonAvg": "#7C6348",
+      "color": "#96826c",
+      "ring": {
+        "r": 142,
+        "strokeWidth": 7,
+        "cx": 500,
+        "cy": 500
+      }
+    },
+    {
+      "id": "yeh2003",
+      "no": "04",
+      "year": 2003,
+      "album": "葉惠美",
+      "albumEn": "Yeh Hui-mei",
+      "tracks": 11,
+      "sourceAvg": "#4D5647",
+      "colorsJsonAvg": "#4D5647",
+      "color": "#72786b",
+      "ring": {
+        "r": 169,
+        "strokeWidth": 9,
+        "cx": 500,
+        "cy": 500
+      }
+    },
+    {
+      "id": "jasmine2004",
+      "no": "05",
+      "year": 2004,
+      "album": "七里香",
+      "albumEn": "Common Jasmine Orange",
+      "tracks": 10,
+      "sourceAvg": "#767460",
+      "colorsJsonAvg": "#767460",
+      "color": "#928f7e",
+      "ring": {
+        "r": 196,
+        "strokeWidth": 7,
+        "cx": 500,
+        "cy": 500
+      }
+    },
+    {
+      "id": "chopin2005",
+      "no": "06",
+      "year": 2005,
+      "album": "11月的蕭邦",
+      "albumEn": "November's Chopin",
+      "tracks": 12,
+      "sourceAvg": "#807875",
+      "colorsJsonAvg": "#807875",
+      "color": "#99928f",
+      "ring": {
+        "r": 223,
+        "strokeWidth": 11,
+        "cx": 500,
+        "cy": 500
+      }
+    },
+    {
+      "id": "still2006",
+      "no": "07",
+      "year": 2006,
+      "album": "依然范特西",
+      "albumEn": "Still Fantasy",
+      "tracks": 10,
+      "sourceAvg": "#504A48",
+      "colorsJsonAvg": "#504A48",
+      "color": "#746f6c",
+      "ring": {
+        "r": 250,
+        "strokeWidth": 7,
+        "cx": 500,
+        "cy": 500
+      }
+    },
+    {
+      "id": "busy2007",
+      "no": "08",
+      "year": 2007,
+      "album": "我很忙",
+      "albumEn": "On the Run",
+      "tracks": 10,
+      "sourceAvg": "#513934",
+      "colorsJsonAvg": "#513934",
+      "color": "#75615c",
+      "ring": {
+        "r": 277,
+        "strokeWidth": 7,
+        "cx": 500,
+        "cy": 500
+      }
+    },
+    {
+      "id": "capricorn2008",
+      "no": "09",
+      "year": 2008,
+      "album": "魔杰座",
+      "albumEn": "Capricorn",
+      "tracks": 11,
+      "sourceAvg": "#7A5730",
+      "colorsJsonAvg": "#7A5730",
+      "color": "#957959",
+      "ring": {
+        "r": 304,
+        "strokeWidth": 9,
+        "cx": 500,
+        "cy": 500
+      }
+    },
+    {
+      "id": "era2010",
+      "no": "10",
+      "year": 2010,
+      "album": "跨時代",
+      "albumEn": "The Era",
+      "tracks": 11,
+      "sourceAvg": "#273941",
+      "colorsJsonAvg": "#273941",
+      "color": "#546166",
+      "ring": {
+        "r": 331,
+        "strokeWidth": 9,
+        "cx": 500,
+        "cy": 500
+      }
+    },
+    {
+      "id": "exclaim2011",
+      "no": "11",
+      "year": 2011,
+      "album": "驚嘆號",
+      "albumEn": "Exclamation Mark",
+      "tracks": 11,
+      "sourceAvg": "#70777F",
+      "colorsJsonAvg": "#70777F",
+      "color": "#8d9297",
+      "ring": {
+        "r": 358,
+        "strokeWidth": 9,
+        "cx": 500,
+        "cy": 500
+      }
+    },
+    {
+      "id": "opus2012",
+      "no": "12",
+      "year": 2012,
+      "album": "十二新作",
+      "albumEn": "Opus 12",
+      "tracks": 12,
+      "sourceAvg": "#4E5A65",
+      "colorsJsonAvg": "#4E5A65",
+      "color": "#727b82",
+      "ring": {
+        "r": 385,
+        "strokeWidth": 11,
+        "cx": 500,
+        "cy": 500
+      }
+    },
+    {
+      "id": "aiyo2014",
+      "no": "13",
+      "year": 2014,
+      "album": "哎呦，不錯哦",
+      "albumEn": "Aiyo, Not Bad",
+      "tracks": 12,
+      "sourceAvg": "#9A8B82",
+      "colorsJsonAvg": "#9A8B82",
+      "color": "#aea199",
+      "ring": {
+        "r": 412,
+        "strokeWidth": 11,
+        "cx": 500,
+        "cy": 500
+      }
+    },
+    {
+      "id": "bedtime2016",
+      "no": "14",
+      "year": 2016,
+      "album": "周杰倫的床邊故事",
+      "albumEn": "Jay Chou's Bedtime Stories",
+      "tracks": 10,
+      "sourceAvg": "#544139",
+      "colorsJsonAvg": "#544139",
+      "color": "#776860",
+      "ring": {
+        "r": 439,
+        "strokeWidth": 7,
+        "cx": 500,
+        "cy": 500
+      }
+    },
+    {
+      "id": "greatest2022",
+      "no": "15",
+      "year": 2022,
+      "album": "最偉大的作品",
+      "albumEn": "Greatest Works of Art",
+      "tracks": 12,
+      "sourceAvg": "#778687",
+      "colorsJsonAvg": "#778687",
+      "color": "#929d9d",
+      "ring": {
+        "r": 466,
+        "strokeWidth": 11,
+        "cx": 500,
+        "cy": 500
+      }
+    },
+    {
+      "id": "sun2026",
+      "no": "16",
+      "year": 2026,
+      "album": "太陽之子",
+      "albumEn": "Children of the Sun",
+      "tracks": 13,
+      "sourceAvg": "#745131",
+      "colorsJsonAvg": "#745131",
+      "color": "#90745a",
+      "ring": {
+        "r": 493,
+        "strokeWidth": 13,
+        "cx": 500,
+        "cy": 500
+      }
+    }
+  ],
+  "note": "专辑名/年份/曲目数逐字取自 js/data.js 的 ARTISTS[\"jay-chou\"].ALBUMS（构建自 albums-raw.json + meta.mjs），未改写未补全。颜色为年轮实际使用的描边色：取 _data/artists/jay-chou/colors.json 的 avg（封面平均色），经 build.mjs:272 写成 sourceAvg，再由 js/app.js 的 lift(sourceAvg, 0.22) 向纸色 #F3F0EA 混合 22% 得到。ring.r / ring.strokeWidth 亦照 app.js renderRings() 的公式算出，仅供前端等比复现，不是另编的数据。"
+}
