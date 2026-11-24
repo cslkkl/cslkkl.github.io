@@ -4,15 +4,25 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>KKLCSL · 把想法，运行起来。</title>
-<meta name="description" content="KKLCSL 的作品现场：声之年轮、Imagora、网页标注与 CPA 切换器。">
+<meta name="description" content="KKLCSL 的作品现场：可以直接在浏览器里开的沙漠拉力游戏，以及 Imagora、声之年轮、网页标注与 CPA 切换器。">
+<link rel="canonical" href="https://toolboxonline.online/">
+<meta name="theme-color" content="#e0e5ec">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://toolboxonline.online/">
+<meta property="og:title" content="KKLCSL · 把想法，运行起来。">
+<meta property="og:description" content="可以直接在浏览器里开的沙漠拉力游戏，以及 Imagora、声之年轮、网页标注与 CPA 切换器。">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="css/site.css">
 </head>
 <body>
+<a class="skip-link" href="#work">跳到主要内容</a>
 <div class="wrap">
 
   <nav aria-label="主导航">
     <div class="brand">KKLCSL<em>PLAYGROUND</em></div>
     <div class="navlinks">
+      <a href="#play">试玩</a>
       <a href="#work">作品</a>
       <a href="#index">项目索引</a>
       <a href="#about">关于</a>
@@ -44,6 +54,38 @@
         </div>
       </div>
     </header>
+
+    <!-- ================= 试玩 ================= -->
+    <section id="play" aria-labelledby="play-title">
+      <div class="play">
+        <div class="play__copy">
+          <div class="roleline">SIROCCO · 个人作品 / 可直接试玩</div>
+          <h2 id="play-title">在浏览器里，<br>把车开出去。</h2>
+          <p>纸墨渲染的沙漠拉力。四张手工地图、五位不同性格的对手、真实抓地与氮气预算，全部跑在浏览器里，不用安装。</p>
+          <ul class="play__list">
+            <li><b>四种模式</b>三圈拉力、单车计时、冠军巡回、无边界自由漫游</li>
+            <li><b>冰面专图</b>抓地只剩三成，长距离甩尾按滑移角回能</li>
+            <li><b>起步判定</b>倒计时压线踩油门，完美起步弹射出发</li>
+          </ul>
+          <div class="rowbtns">
+            <a class="btn btn--primary" href="/sirocco/">开始驾驶</a>
+            <a class="btn btn--sm" href="https://github.com/Checkpoint-Forge/sirocco-rally" target="_blank" rel="noopener">看源码</a>
+          </div>
+        </div>
+        <div class="play__stage" aria-hidden="true">
+          <div class="track">
+            <span class="track__ring track__ring--1"></span>
+            <span class="track__ring track__ring--2"></span>
+            <span class="track__ring track__ring--3"></span>
+            <span class="track__car"></span>
+            <div class="track__core">
+              <strong>SIROCCO</strong>
+              <span>沙脊 · 04 地图</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- ================= 作品 ================= -->
     <section id="work" aria-labelledby="work-title">
@@ -216,7 +258,7 @@
 
   <footer>
     <span>KKLCSL / PLAYGROUND</span>
-    <span>本地预览版本 · 未部署</span>
+    <span><a href="https://github.com/cslkkl" target="_blank" rel="noopener">GitHub</a> · 作品持续更新</span>
   </footer>
 </div>
 

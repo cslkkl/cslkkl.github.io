@@ -556,3 +556,121 @@ footer {
   * { transition: none !important; }
   html { scroll-behavior: auto; }
 }
+
+/* ---------------------------------------------------------------- 跳到正文 */
+
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: -60px;
+  z-index: 1000;
+  background: var(--raised);
+  border-radius: var(--r-sm);
+  box-shadow: var(--up-sm);
+  padding: 12px 20px;
+  font-size: 13px;
+  transition: top var(--ease);
+}
+.skip-link:focus-visible { top: 16px; }
+
+/* ---------------------------------------------------------------- 试玩专区 */
+
+.play {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 64px;
+  align-items: center;
+  background: var(--bg);
+  border-radius: var(--r-lg);
+  box-shadow: var(--down-md);
+  padding: 56px;
+}
+.play__copy h2 {
+  font-size: clamp(30px, 3.4vw, 46px);
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  margin: 14px 0 18px;
+}
+.play__copy > p { font-size: 14.5px; color: var(--muted); max-width: 42ch; }
+.play__list { list-style: none; margin: 26px 0 0; padding: 0; display: grid; gap: 12px; }
+.play__list li {
+  font-size: 13px;
+  color: var(--muted);
+  display: grid;
+  grid-template-columns: 5.6em 1fr;
+  gap: 14px;
+  align-items: baseline;
+  padding-bottom: 12px;
+  box-shadow: inset 0 -1px 0 rgba(184, 188, 194, 0.55);
+}
+.play__list li:last-child { box-shadow: none; padding-bottom: 0; }
+.play__list b { color: var(--ink); font-weight: 600; font-size: 13px; }
+
+/* 赛道盘：沿用刻度盘的同心凹槽语言，不引入新材质 */
+.play__stage { display: grid; place-items: center; }
+.track {
+  position: relative;
+  width: min(100%, 380px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--bg);
+  box-shadow: var(--up-md);
+}
+.track__ring {
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: inset 3px 3px 7px var(--dark), inset -3px -3px 7px var(--light);
+}
+.track__ring--1 { inset: 8%; }
+.track__ring--2 { inset: 20%; }
+.track__ring--3 { inset: 32%; box-shadow: inset 2px 2px 5px rgba(109, 93, 252, 0.4), inset -2px -2px 5px var(--light); }
+.track__car {
+  position: absolute;
+  top: 4%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  margin-left: -8px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 5px rgba(109, 93, 252, 0.16);
+}
+.track__core {
+  position: absolute;
+  inset: 42%;
+  border-radius: 50%;
+  background: var(--raised);
+  box-shadow: var(--up-sm), inset 0 0 0 1px rgba(109, 93, 252, 0.16);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  text-align: center;
+}
+.track__core strong {
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+}
+.track__core span { font-size: 10px; color: var(--muted); letter-spacing: 0.04em; }
+
+@media (max-width: 900px) {
+  .play { grid-template-columns: 1fr; gap: 36px; padding: 32px; }
+  .play__stage { order: -1; }
+  .track { width: min(100%, 280px); }
+}
+@media (max-width: 760px) {
+  .play { padding: 26px 22px; }
+  .play__list li { grid-template-columns: 1fr; gap: 4px; }
+}
+
+/* ---------------------------------------------------------------- 排版收尾 */
+
+/* 大标题避免末行只剩一个词 */
+h1, h2, h3, .play__copy > p, .head p { text-wrap: balance; }
+/* 读数用等宽数字，数值变化时宽度不跳 */
+.readout strong, .dial__center strong, .minidial__center strong, .row .credit { font-variant-numeric: tabular-nums; }
+/* 长列表最后一项不带分隔线 */
+.row:last-child { margin-bottom: 0; }
