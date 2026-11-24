@@ -333,6 +333,7 @@
   /* ================================================================ 索引 */
 
   const PROJECTS_INDEX = [
+    { name: "SIROCCO 沙脊", desc: "莫比斯风 3D 沙漠拉力，四种模式可直接试玩", credit: "个人作品", kind: "own", href: "/sirocco/", cta: "直接试玩", self: true },
     { name: "Imagora", desc: "图像生成与画布编排", credit: "参与开发", kind: "contrib", href: "https://github.com/Cogniform/imagora", cta: "查看项目" },
     { name: "声之年轮", desc: "用时间组织唱片目录", credit: "个人作品", kind: "own", href: "https://github.com/cslkkl/discography-showcase", cta: "查看项目" },
     { name: "网页标注", desc: "带着页面上下文表达问题", credit: "个人作品", kind: "own", href: "https://github.com/cslkkl/dsh-web-annotator", cta: "查看项目" },
@@ -348,7 +349,7 @@
         <strong>${p.name}</strong>
         <span>${p.desc}</span>
         <span class="credit">${p.credit}</span>
-        <a class="btn btn--sm" href="${p.href}" target="_blank" rel="noopener">${p.cta}</a>
+        <a class="btn btn--sm" href="${p.href}"${p.self ? "" : " target=\"_blank\" rel=\"noopener\""}>${p.cta}</a>
       </div>`
     ).join("");
 
