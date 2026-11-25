@@ -686,8 +686,13 @@ footer {
   gap: 32px;
   margin-top: 32px;
 }
-.play-more .panel { display: grid; align-content: start; }
-.play-more .panel > p { max-width: 40ch; }
+/* 卡片改成纵向 flex：按钮靠 margin-top:auto 沉到卡片底部，
+   两张卡文字长短不同也能对齐。 */
+.play-more .panel { display: flex; flex-direction: column; }
+/* 中文不能用 ch 量行宽——ch 是「0」的宽度，40ch 只有 260px，
+   一句二十来字的话会被硬拆成两行。这里放开到整卡宽。 */
+.play-more .panel > p { max-width: none; }
+.play-more .rowbtns { margin-top: auto; padding-top: 20px; }
 
 @media (max-width: 900px) {
   .play { grid-template-columns: 1fr; gap: 36px; padding: 32px; }
