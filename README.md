@@ -1,8 +1,65 @@
-# KKLCSL Playground — Neumorphism 版（第 7 轮：三款游戏 + 星舰剖析）
+# KKLCSL Playground — Neumorphism 版（第 8 轮：接上自建服务器上的在线工具）
 
 本地预览：在仓库根目录跑 `python -m http.server 8899`，打开 <http://127.0.0.1:8899/>
 
 唯一视觉规范：`design/neumorphism-ui.html`（不在本仓库，存放于上级工作区）。布局、色板、阴影、圆角、字号层级均按该样稿还原。
+
+---
+
+## 第 8 轮：代码安魂曲上线，站点给它一个位置
+
+此前的索引里「代码安魂曲」只链仓库，因为 Streamlit Cloud 上那个演示已经 404。
+本轮把它部署到自有服务器，站点与主页门面都改成可直接试用。
+
+### 1. 部署（110.41.59.97）
+
+| 项 | 结论 |
+| --- | --- |
+| 位置 | `/opt/code-requiem`（代码）+ `/opt/code-requiem/venv`（依赖） |
+| 运行 | systemd `code-requiem.service`，非 root 服务用户 `requiem` |
+| 监听 | `127.0.0.1:8501`，`--server.baseUrlPath=requiem`，不直接对外 |
+| 入口 | Caddy `:80` 上新增 `handle /requiem/*`，其余路径仍走 DSH 的 cookie 闸门 |
+| 加固 | `NoNewPrivileges`、`ProtectSystem=strict`、`PrivateTmp`、`MemoryMax=1600M`、`CPUQuota=150%` |
+
+两个环境事实决定了做法：
+- **`github.com:443` 在这台机器上不可达**，`api.github.com` 与 `codeload` 可达。
+  应用自己的 `src/net.py` 会先做 3 秒 TCP 探测，不通就改走 REST + tarball —— 正好落在这条降级路径上，
+  分析能跑完（实测 15–85 秒）。
+- **PyPI 官方站 7 秒/次、`files.pythonhosted.org` 不稳**，装依赖改走阿里云镜像，
+  否则 47 个包要装一个多小时。
+
+AI 叙事接到了本机网关 `127.0.0.1:8317`（`cn/deepseek-v4-pro`），侧栏实测显示「AI 叙事：在线」。
+
+### 2. 站点
+
+新增一个 `#tools` 区块，放在试玩之后、作品之前，复用 `.imagora` 那套「左图右文」：
+
+- 标题 `工具，也能直接用。`
+- 左：真实判读结果截图（Kornia 91 分，可点开放大）
+- 右：`CODE REQUIEM · 个人作品 / 在线可跑`，两个按钮：直接试用 / 看源码
+- 一句边界说明：部署在自有服务器；一次判读 10–90 秒，匿名 GitHub 配额对全站共享
+
+导航从「试玩 / 作品 / 项目索引 / 关于」改成「试玩 / 工具 / 作品 / 索引」——
+加了「工具」就必须腾位置，`项目索引` 缩成 `索引`、`关于` 让位（它本来就在页面末段）。
+
+索引里「代码安魂曲」那行从 `查看项目` 改成 `直接试用`，指向部署地址。
+
+### 3. 实测
+
+| 项 | 1440 | 390 |
+| --- | --- | --- |
+| scrollWidth − clientWidth | **−15（无溢出）** | **−15（无溢出）** |
+| `#tools` 区块尺寸 | 1152 × 358 | 335 × 551 |
+| 对比度未达标元素 | 0 | 0 |
+| 结构自检（标签闭合 / id 唯一 / aria 指向 / 按钮可读名 / img alt） | 通过 | 通过 |
+| 索引筛选 | 全部 15 / 个人 13 / 参与 2 | 同 |
+
+### 4. 还没做
+
+- 明文 HTTP + IP 直连。给它一个域名（比如 `requiem.zlzayn.site` 的 A 记录指到 110.41.59.97），
+  Caddy 会自动签证书，链接就不用带端口和 IP 了。
+- 匿名 GitHub 配额 60 次/小时，一次判读要 6–14 次请求，也就是说全站每小时只够 4–10 次判读。
+  在 `/opt/code-requiem/env` 里填一个只读 `GITHUB_TOKEN` 就能提到 5000 次/小时。
 
 ---
 

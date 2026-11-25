@@ -350,7 +350,7 @@
     { name: "网页标注", desc: "带着页面上下文表达问题", credit: "个人作品", kind: "own", href: "https://github.com/cslkkl/dsh-web-annotator", cta: "查看项目" },
     { name: "CPA 切换器", desc: "把账号管理带回工作区", credit: "个人作品", kind: "own", href: "https://github.com/cslkkl/dsh-cpa-switch", cta: "查看项目" },
     { name: "模型接线板", desc: "每个成员各接一条模型线路", credit: "个人作品", kind: "own", href: "https://github.com/cslkkl/dsh-switchboard", cta: "查看项目" },
-    { name: "代码安魂曲", desc: "给 Git 仓库做生命体征诊断", credit: "个人作品", kind: "own", href: "https://github.com/cslkkl/code-requiem", cta: "查看项目" },
+    { name: "代码安魂曲", desc: "给 Git 仓库做生命体征诊断，已部署在线可跑", credit: "个人作品", kind: "own", href: "http://110.41.59.97/requiem/", cta: "直接试用" },
     { name: "mv-code", desc: "一句歌名，画出一支代码 MV", credit: "个人作品", kind: "own", href: "https://github.com/cslkkl/mv-code", cta: "查看项目" },
     { name: "SEC 线索研究", desc: "从 Form D 里挑出值得联系的公司", credit: "个人作品", kind: "own", href: "https://github.com/cslkkl/us-funding-lead-research", cta: "查看项目" },
     { name: "BuddyKey", desc: "多账号额度切成具名 API Key", credit: "个人作品", kind: "own", href: "https://github.com/cslkkl/cpa-Buddykey", cta: "查看项目" },
