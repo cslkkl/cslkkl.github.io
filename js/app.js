@@ -19,6 +19,13 @@
   let currentProject = "rings";
 
   const SHOTS = {
+    starship: {
+      src: "assets/starship.jpg",
+      alt: "ARGUS-IX 的剖析状态：十三个部件沿各自的轴向分离，每个部件都带引线与标签",
+      name: "ARGUS-IX 星舰剖析",
+      note: "十三个部件拆开看，没有模型文件",
+      href: "https://github.com/cslkkl/starship-anatomy",
+    },
     imagora: {
       src: "assets/imagora-main.png",
       alt: "Imagora 的无限画布：提示词卡片、图片组与连线",
@@ -334,10 +341,19 @@
 
   const PROJECTS_INDEX = [
     { name: "SIROCCO 沙脊", desc: "莫比斯风 3D 沙漠拉力，四种模式可直接试玩", credit: "个人作品", kind: "own", href: "/sirocco/", cta: "直接试玩", self: true },
+    { name: "AZIMUT 风境", desc: "滑翔机穿越沙丘、遗迹与漂浮群岛", credit: "个人作品", kind: "own", href: "https://zlzayn.site/azimut", cta: "直接试玩" },
+    { name: "双刃战士 · 纵目", desc: "三星堆双人清版，单文件 HTML，断网能打", credit: "个人作品", kind: "own", href: "https://github.com/cslkkl/double-blade-zongmu", cta: "查看项目" },
+    { name: "ARGUS-IX 星舰剖析", desc: "十三个部件拆开看，没有模型文件", credit: "个人作品", kind: "own", href: "https://github.com/cslkkl/starship-anatomy", cta: "查看项目" },
     { name: "Imagora", desc: "图像生成与画布编排", credit: "参与开发", kind: "contrib", href: "https://github.com/Cogniform/imagora", cta: "查看项目" },
+    { name: "Imagora Desk", desc: "把 Imagora 的画布搬进会话", credit: "个人作品", kind: "own", href: "https://github.com/cslkkl/dsh-imagora-desk", cta: "查看项目" },
     { name: "声之年轮", desc: "用时间组织唱片目录", credit: "个人作品", kind: "own", href: "https://github.com/cslkkl/discography-showcase", cta: "查看项目" },
     { name: "网页标注", desc: "带着页面上下文表达问题", credit: "个人作品", kind: "own", href: "https://github.com/cslkkl/dsh-web-annotator", cta: "查看项目" },
     { name: "CPA 切换器", desc: "把账号管理带回工作区", credit: "个人作品", kind: "own", href: "https://github.com/cslkkl/dsh-cpa-switch", cta: "查看项目" },
+    { name: "模型接线板", desc: "每个成员各接一条模型线路", credit: "个人作品", kind: "own", href: "https://github.com/cslkkl/dsh-switchboard", cta: "查看项目" },
+    { name: "代码安魂曲", desc: "给 Git 仓库做生命体征诊断", credit: "个人作品", kind: "own", href: "https://github.com/cslkkl/code-requiem", cta: "查看项目" },
+    { name: "mv-code", desc: "一句歌名，画出一支代码 MV", credit: "个人作品", kind: "own", href: "https://github.com/cslkkl/mv-code", cta: "查看项目" },
+    { name: "SEC 线索研究", desc: "从 Form D 里挑出值得联系的公司", credit: "个人作品", kind: "own", href: "https://github.com/cslkkl/us-funding-lead-research", cta: "查看项目" },
+    { name: "BuddyKey", desc: "多账号额度切成具名 API Key", credit: "个人作品", kind: "own", href: "https://github.com/cslkkl/cpa-Buddykey", cta: "查看项目" },
     { name: "WorkBuddy Bridge", desc: "额度与模型档位信息改进", credit: "上游贡献", kind: "contrib", href: "https://github.com/dsh-plugin-lab/dsh-workbuddy-bridge/pull/3", cta: "查看贡献" },
   ];
 

@@ -4,14 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>KKLCSL · 把想法，运行起来。</title>
-<meta name="description" content="KKLCSL 的作品现场：可以直接在浏览器里开的沙漠拉力游戏，以及 Imagora、声之年轮、网页标注与 CPA 切换器。">
+<meta name="description" content="KKLCSL 的作品现场：三款可以直接开一把的浏览器游戏，以及 Imagora、ARGUS-IX 星舰剖析、声之年轮、网页标注与 CPA 切换器。">
 <link rel="canonical" href="https://toolboxonline.online/">
 <meta name="theme-color" content="#e0e5ec">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://toolboxonline.online/">
 <meta property="og:title" content="KKLCSL · 把想法，运行起来。">
-<meta property="og:description" content="可以直接在浏览器里开的沙漠拉力游戏，以及 Imagora、声之年轮、网页标注与 CPA 切换器。">
+<meta property="og:description" content="三款可以直接开一把的浏览器游戏，以及 Imagora、ARGUS-IX 星舰剖析、声之年轮、网页标注与 CPA 切换器。">
+<meta property="og:image" content="https://toolboxonline.online/assets/sirocco.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="css/site.css">
 </head>
@@ -35,8 +36,8 @@
     <header class="hero">
       <div>
         <h1>把想法，<b>运行起来。</b></h1>
-        <p>工具、图像、音乐。它们不该只剩一段说明，这里可以真的试一下。</p>
-        <a class="btn btn--primary" href="#work">进入作品现场</a>
+        <p>工具、游戏、图像、音乐。它们不该只剩一段说明，这里可以真的试一下。</p>
+        <a class="btn btn--primary" href="#play">先进一把游戏</a>
       </div>
 
       <div>
@@ -47,6 +48,7 @@
         <div class="stage-meta">
           <div class="segment" role="group" aria-label="切换首屏项目">
             <button type="button" aria-pressed="true" data-k="rings">声之年轮</button>
+            <button type="button" aria-pressed="false" data-k="starship">星舰</button>
             <button type="button" aria-pressed="false" data-k="imagora">Imagora</button>
             <button type="button" aria-pressed="false" data-k="annotator">网页标注</button>
             <button type="button" aria-pressed="false" data-k="cpa">CPA</button>
@@ -57,10 +59,15 @@
 
     <!-- ================= 试玩 ================= -->
     <section id="play" aria-labelledby="play-title">
+      <div class="head">
+        <h2 id="play-title">先开一把。</h2>
+        <p>三款都是跑在浏览器里的游戏，不用装、不用注册。前两款点开就玩，第三款是单文件 HTML，下载双击即可。</p>
+      </div>
+
       <div class="play">
         <div class="play__copy">
-          <div class="roleline">SIROCCO · 个人作品 / 可直接试玩</div>
-          <h2 id="play-title">在浏览器里，<br>把车开出去。</h2>
+          <div class="roleline">SIROCCO · 个人作品 / 本站可直接试玩</div>
+          <h3>在浏览器里，<br>把车开出去。</h3>
           <p>纸墨渲染的沙漠拉力。四张手工地图、五位不同性格的对手、真实抓地与氮气预算，全部跑在浏览器里，不用安装。</p>
           <ul class="play__list">
             <li><b>四种模式</b>三圈拉力、单车计时、冠军巡回、无边界自由漫游</li>
@@ -69,7 +76,6 @@
           </ul>
           <div class="rowbtns">
             <a class="btn btn--primary" href="/sirocco/">开始驾驶</a>
-            <a class="btn btn--sm" href="https://github.com/Checkpoint-Forge/sirocco-rally" target="_blank" rel="noopener">看源码</a>
           </div>
         </div>
         <div class="play__stage" aria-hidden="true">
@@ -84,6 +90,52 @@
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="play-more">
+
+        <article class="panel panel--flat" aria-labelledby="azimut-title">
+          <h3 id="azimut-title">在太阳落下去之前，飞过去。</h3>
+          <p>AZIMUT 风境 · 一架滑翔机，一条被风写的航路。</p>
+
+          <figure class="shot">
+            <button class="screen shot__zoom" type="button"
+                    data-zoom="assets/azimut.jpg"
+                    data-zoom-alt="AZIMUT 的飞行画面：滑翔机掠过沙丘与遗迹，右侧是手绘感的风境笔记，标着光门、晶体与岩体的得分"
+                    aria-label="放大查看 AZIMUT 的飞行画面">
+              <img src="assets/azimut.jpg" alt="AZIMUT 的飞行画面：滑翔机掠过沙丘与遗迹，右侧是手绘感的风境笔记" loading="lazy" decoding="async">
+            </button>
+            <figcaption>真实运行画面 · 沙丘、遗迹与漂浮群岛</figcaption>
+          </figure>
+
+          <p>自由探索或复航校准，两套记录分开记；机关按船坞、升流井、风拱分成九类二十处，地图本身是一串可以自己重敲的种子。</p>
+
+          <div class="rowbtns">
+            <a class="btn btn--sm btn--primary" href="https://zlzayn.site/azimut" target="_blank" rel="noopener">去飞一圈</a>
+          </div>
+        </article>
+
+        <article class="panel panel--flat" aria-labelledby="zongmu-title">
+          <h3 id="zongmu-title">一人一把刀，守一个坑。</h3>
+          <p>双刃战士 · 纵目 · 三星堆青铜面具下的双人清版。</p>
+
+          <figure class="shot">
+            <button class="screen shot__zoom" type="button"
+                    data-zoom="assets/zongmu.jpg"
+                    data-zoom-alt="纵目的第一阵：两个青铜纵目祭司站在祭祀坑里，坑后平台上挂着青铜钟与铜鼓，左侧是血条与武器耐久"
+                    aria-label="放大查看纵目的第一阵画面">
+              <img src="assets/zongmu.jpg" alt="纵目的第一阵：两个青铜纵目祭司站在祭祀坑里，坑后平台上挂着青铜钟与铜鼓" loading="lazy" decoding="async">
+            </button>
+            <figcaption>真实运行画面 · 第一阵</figcaption>
+          </figure>
+
+          <p>单文件 HTML，双击就能开打；两个人挤一个键盘，插上手柄则各控一人。刀会断，断了先空手，得走过去再捡一把。</p>
+
+          <div class="rowbtns">
+            <a class="btn btn--sm btn--primary" href="https://github.com/cslkkl/double-blade-zongmu" target="_blank" rel="noopener">下载开打</a>
+          </div>
+        </article>
+
       </div>
     </section>
 
@@ -116,39 +168,88 @@
 
       <div class="works">
 
-        <!-- 02 声之年轮 -->
-        <div class="panel panel--flat" aria-labelledby="music-title">
-          <h3 id="music-title">时间，也可以被浏览。</h3>
-          <p>声之年轮 · 项目收录多位歌手，本页演示周杰伦。</p>
+        <div class="stack">
 
-          <div class="minidial" data-minidial role="group" aria-label="年轮：相邻年份的凹槽，可点选">
-            <!-- 由 JS 渲染三条真实年份凹槽 -->
+          <!-- 声之年轮 -->
+          <div class="panel panel--flat" aria-labelledby="music-title">
+            <h3 id="music-title">时间，也可以被浏览。</h3>
+            <p>声之年轮 · 项目收录多位歌手，本页演示周杰伦。</p>
+
+            <div class="minidial" data-minidial role="group" aria-label="年轮：相邻年份的凹槽，可点选">
+              <!-- 由 JS 渲染三条真实年份凹槽 -->
+            </div>
+
+            <div class="readout">
+              <div>
+                <small>年份</small>
+                <strong data-mini-year>2000</strong>
+              </div>
+              <div>
+                <small>专辑</small>
+                <strong data-mini-album>Jay</strong>
+              </div>
+              <div>
+                <small>曲目</small>
+                <strong data-mini-tracks>10</strong>
+              </div>
+            </div>
+
+            <div class="rowbtns">
+              <a class="btn btn--sm" href="https://github.com/cslkkl/discography-showcase" target="_blank" rel="noopener">探索项目</a>
+            </div>
+            <p class="declaration">本页只演示周杰伦一位，项目共包含八位歌手。</p>
           </div>
 
-          <div class="readout">
-            <div>
-              <small>年份</small>
-              <strong data-mini-year>2000</strong>
+          <!-- ARGUS-IX 星舰剖析 -->
+          <div class="panel panel--flat" aria-labelledby="starship-title">
+            <h3 id="starship-title">把一艘船，拆开看。</h3>
+            <p>ARGUS-IX · 深空战术巡洋舰，十三个部件。</p>
+
+            <figure class="shot">
+              <button class="screen shot__zoom" type="button"
+                      data-zoom="assets/starship.jpg"
+                      data-zoom-alt="ARGUS-IX 的剖析状态：十三个部件沿各自的轴向分离，每个部件都带引线与标签，左侧是部件清单与剖析系数"
+                      aria-label="放大查看 ARGUS-IX 的剖析状态">
+                <img src="assets/starship.jpg" alt="ARGUS-IX 的剖析状态：十三个部件沿各自的轴向分离，每个部件都带引线与标签" loading="lazy" decoding="async">
+              </button>
+              <figcaption>真实运行画面 · 剖析完成</figcaption>
+            </figure>
+
+            <p>没有任何模型文件。装甲是圆角截面沿轴放样算出来的，翼型沿展向放样，尾焰是跑在 GPU 上的湍流噪声。</p>
+
+            <div class="rowbtns">
+              <a class="btn btn--sm" href="https://github.com/cslkkl/starship-anatomy" target="_blank" rel="noopener">查看项目</a>
             </div>
-            <div>
-              <small>专辑</small>
-              <strong data-mini-album>Jay</strong>
-            </div>
-            <div>
-              <small>曲目</small>
-              <strong data-mini-tracks>10</strong>
+            <p class="declaration">three.js 程序化建模，零构建、全离线；手势控制需授权摄像头。</p>
+          </div>
+
+          <!-- Imagora Desk -->
+          <div class="panel panel--flat" aria-labelledby="desk-title">
+            <h3 id="desk-title">画布，搬进会话里。</h3>
+            <p>Imagora Desk · 提示词卡与图片摊在同一张画布上。</p>
+
+            <figure class="shot">
+              <button class="screen shot__zoom" type="button"
+                      data-zoom="assets/imagora-desk.jpg"
+                      data-zoom-alt="DSH 里的无限画布：上方是提示词卡与它们引用的图片，跑完的结果回流成下面的新节点，节点之间用虚线连成参考关系"
+                      aria-label="放大查看 Imagora Desk 的画布">
+                <img src="assets/imagora-desk.jpg" alt="DSH 里的无限画布：提示词卡与引用的图片在上，跑完的结果回流成下面的新节点" loading="lazy" decoding="async">
+              </button>
+              <figcaption>真实运行画面 · 画布与回流</figcaption>
+            </figure>
+
+            <p>两点之间连一条线，那条线就是参考关系。请求直连你自己填的接口，密钥只写本机。</p>
+
+            <div class="rowbtns">
+              <a class="btn btn--sm" href="https://github.com/cslkkl/dsh-imagora-desk" target="_blank" rel="noopener">查看项目</a>
             </div>
           </div>
 
-          <div class="rowbtns">
-            <a class="btn btn--sm" href="https://github.com/cslkkl/discography-showcase" target="_blank" rel="noopener">探索项目</a>
-          </div>
-          <p class="declaration">本页只演示周杰伦一位，项目共包含八位歌手。</p>
         </div>
 
         <div class="stack">
 
-          <!-- 03 网页标注 -->
+          <!-- 网页标注 -->
           <div class="panel panel--flat" data-annot aria-labelledby="annot-title">
             <h3 id="annot-title">直接指出问题。</h3>
             <p>网页标注 · 选它、写下想法、整理出上下文。</p>
@@ -193,7 +294,7 @@
             </div>
           </div>
 
-          <!-- 04 CPA -->
+          <!-- CPA -->
           <div class="panel panel--flat" data-cpa aria-labelledby="cpa-title">
             <h3 id="cpa-title">少切一次窗口。</h3>
             <p>CPA 切换器 · 账号与额度，就在手边。</p>
@@ -236,6 +337,31 @@
             </div>
           </div>
 
+          <!-- 模型接线板 -->
+          <div class="panel panel--flat" aria-labelledby="switchboard-title">
+            <h3 id="switchboard-title">派出去的活，换个模型。</h3>
+            <p>模型接线板 · 每个成员各接一条线路，点一下就换。</p>
+
+            <figure class="shot">
+              <div class="screen screen--tall">
+                <button class="shot__zoom" type="button"
+                        data-zoom="assets/switchboard.png"
+                        data-zoom-alt="模型接线板浮层：每行一位成员的名称、职责与该成员实际使用的模型，右侧是运行状态徽标"
+                        aria-label="放大查看模型接线板的成员列表">
+                  <img src="assets/switchboard.png" alt="模型接线板浮层：每行一位成员的名称、职责与该成员实际使用的模型" loading="lazy" decoding="async">
+                </button>
+              </div>
+              <figcaption>真实组件画面 · 成员与路由</figcaption>
+            </figure>
+
+            <p>点名、本对话默认、按名字或任务描述匹配规则、全局默认，逐层往下找，都没命中就继承主 Agent。</p>
+
+            <div class="rowbtns">
+              <a class="btn btn--sm" href="https://github.com/cslkkl/dsh-switchboard" target="_blank" rel="noopener">查看项目</a>
+            </div>
+            <p class="declaration">配图为虚构成员名与演示路由，不是真实会话。</p>
+          </div>
+
         </div>
       </div>
     </section>
@@ -258,7 +384,7 @@
     <section id="about" class="about" aria-labelledby="about-title">
       <h2 id="about-title">先遇到一个麻烦，<br>再给它做一个工具。</h2>
       <div>
-        <p>我关注交互、工具与可视化。这里不只放结论，也尽量让人亲手试一下。</p>
+        <p>我关注交互、工具与可视化。有些是给自己省事的工具，有些只是想把一个画面真的跑起来。这里不只放结论，也尽量让人亲手试一下。</p>
         <div class="rowbtns">
           <a class="btn btn--sm btn--primary" href="https://github.com/cslkkl" target="_blank" rel="noopener">在 GitHub 继续看</a>
         </div>

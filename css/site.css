@@ -93,6 +93,14 @@ pre { margin: 0; }
 .btn--sm { padding: 10px 18px; font-size: 13px; border-radius: var(--r-sm); }
 .btn:disabled { color: var(--muted); cursor: not-allowed; }
 .btn:disabled:hover { box-shadow: var(--up-sm); }
+/* 禁用态的主按钮不能留着强调色底：灰字压在 #6d5dfc 上只有 1.3:1。
+   退回基底面，读起来就是"这枚按钮还没准备好"。 */
+.btn--primary:disabled,
+.btn--primary:disabled:hover {
+  background: var(--bg);
+  color: var(--muted);
+  box-shadow: var(--up-sm);
+}
 
 /* ---------------------------------------------------------------- 分段控件 */
 
@@ -277,13 +285,15 @@ h1 b { display: block; color: var(--accent); font-weight: 600; }
 .stage-info__note { font-size: 12px; color: var(--muted); }
 .stage-info .btn { flex: 0 0 auto; }
 
+/* 首屏切换条：五个态比刻度盘宽，居中才与圆盘对齐 */
 .stage-meta {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-end;
   gap: 20px;
   margin-top: 34px;
 }
+.stage-meta .segment button { padding: 9px 15px; }
 
 /* ---------------------------------------------------------------- 章节 */
 
@@ -492,7 +502,16 @@ footer {
   box-shadow: var(--up-md);
   padding: 22px;
 }
-.lightbox__figure img { width: 100%; height: auto; border-radius: var(--r-md); }
+/* 横版截图按框宽铺满；竖版（模型接线板）按视口高度收住，整张可见、不出视口。
+   两种限制同时存在时浏览器保持原比例，所以横版的实际尺寸不受影响。 */
+.lightbox__figure img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: calc(100vh - 200px);
+  margin: 0 auto;
+  border-radius: var(--r-md);
+}
 .lightbox__cap { font-size: 12px; color: var(--muted); text-align: center; }
 .lightbox__close {
   position: absolute;
@@ -637,7 +656,7 @@ footer {
 }
 .track__core {
   position: absolute;
-  inset: 42%;
+  inset: 34%;
   border-radius: 50%;
   background: var(--raised);
   box-shadow: var(--up-sm), inset 0 0 0 1px rgba(109, 93, 252, 0.16);
@@ -652,19 +671,39 @@ footer {
   font-family: var(--mono);
   font-size: 13px;
   letter-spacing: 0.08em;
-  color: var(--accent);
+  /* 强调色 #6d5dfc 在抬起面上只有 3.99:1，13px 达不到 AA；
+     强调留在车点与外圈，圆心字标用墨色（12.6:1） */
+  color: var(--ink);
 }
-.track__core span { font-size: 10px; color: var(--muted); letter-spacing: 0.04em; }
+/* 圆心放得下的短标签：不允许在词中间断行，否则「地图」会被拆成两行 */
+.track__core span { font-size: 10px; color: var(--muted); letter-spacing: 0.04em; white-space: nowrap; }
+
+/* 试玩区第二排：两款外部游戏，与首块同宽同距。
+   基础规则必须写在下面那组媒体查询之前，否则 900px 以下的单列会被覆盖回去。 */
+.play-more {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-top: 32px;
+}
+.play-more .panel { display: grid; align-content: start; }
+.play-more .panel > p { max-width: 40ch; }
 
 @media (max-width: 900px) {
   .play { grid-template-columns: 1fr; gap: 36px; padding: 32px; }
   .play__stage { order: -1; }
   .track { width: min(100%, 280px); }
+  .play-more { grid-template-columns: 1fr; gap: 28px; }
 }
 @media (max-width: 760px) {
   .play { padding: 26px 22px; }
   .play__list li { grid-template-columns: 1fr; gap: 4px; }
 }
+
+/* 竖版截图（模型接线板）：整张收窄居中，不裁切、不撑高。
+   300px 是由两列配平定出来的：再宽右列会比左列高出百余像素。 */
+.screen--tall { display: grid; place-items: center; padding: 18px; }
+.screen--tall .shot__zoom { width: min(100%, 300px); }
 
 /* ---------------------------------------------------------------- 排版收尾 */
 
