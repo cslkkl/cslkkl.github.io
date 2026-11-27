@@ -19,13 +19,6 @@
   let currentProject = "rings";
 
   const SHOTS = {
-    starship: {
-      src: "assets/starship.jpg",
-      alt: "ARGUS-IX 的剖析状态：十三个部件沿各自的轴向分离，每个部件都带引线与标签",
-      name: "ARGUS-IX 星舰剖析",
-      note: "十三个部件拆开看，没有模型文件",
-      href: "https://github.com/cslkkl/starship-anatomy",
-    },
     imagora: {
       src: "assets/imagora-main.png",
       alt: "Imagora 的无限画布：提示词卡片、图片组与连线",
@@ -341,9 +334,7 @@
 
   const PROJECTS_INDEX = [
     { name: "SIROCCO 沙脊", desc: "莫比斯风 3D 沙漠拉力，四种模式可直接试玩", credit: "个人作品", kind: "own", href: "/sirocco/", cta: "直接试玩", self: true },
-    { name: "AZIMUT 风境", desc: "滑翔机穿越沙丘、遗迹与漂浮群岛", credit: "个人作品", kind: "own", href: "https://zlzayn.site/azimut", cta: "直接试玩" },
     { name: "双刃战士 · 纵目", desc: "三星堆双人清版，单文件 HTML，断网能打", credit: "个人作品", kind: "own", href: "https://github.com/cslkkl/double-blade-zongmu", cta: "查看项目" },
-    { name: "ARGUS-IX 星舰剖析", desc: "十三个部件拆开看，没有模型文件", credit: "个人作品", kind: "own", href: "https://github.com/cslkkl/starship-anatomy", cta: "查看项目" },
     { name: "Imagora", desc: "图像生成与画布编排", credit: "参与开发", kind: "contrib", href: "https://github.com/Cogniform/imagora", cta: "查看项目" },
     { name: "Imagora Desk", desc: "把 Imagora 的画布搬进会话", credit: "个人作品", kind: "own", href: "https://github.com/cslkkl/dsh-imagora-desk", cta: "查看项目" },
     { name: "声之年轮", desc: "用时间组织唱片目录", credit: "个人作品", kind: "own", href: "https://github.com/cslkkl/discography-showcase", cta: "查看项目" },

@@ -678,32 +678,20 @@ footer {
 /* 圆心放得下的短标签：不允许在词中间断行，否则「地图」会被拆成两行 */
 .track__core span { font-size: 10px; color: var(--muted); letter-spacing: 0.04em; white-space: nowrap; }
 
-/* 试玩区第二排：两款外部游戏，与首块同宽同距。
-   基础规则必须写在下面那组媒体查询之前，否则 900px 以下的单列会被覆盖回去。 */
-.play-more {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
-  margin-top: 32px;
-}
-/* 卡片改成纵向 flex：按钮靠 margin-top:auto 沉到卡片底部，
-   两张卡文字长短不同也能对齐。 */
-.play-more .panel { display: flex; flex-direction: column; }
-/* 中文不能用 ch 量行宽——ch 是「0」的宽度，40ch 只有 260px，
-   一句二十来字的话会被硬拆成两行。这里放开到整卡宽。 */
-.play-more .panel > p { max-width: none; }
-.play-more .rowbtns { margin-top: auto; padding-top: 20px; }
-
 @media (max-width: 900px) {
   .play { grid-template-columns: 1fr; gap: 36px; padding: 32px; }
   .play__stage { order: -1; }
   .track { width: min(100%, 280px); }
-  .play-more { grid-template-columns: 1fr; gap: 28px; }
 }
 @media (max-width: 760px) {
   .play { padding: 26px 22px; }
   .play__list li { grid-template-columns: 1fr; gap: 4px; }
 }
+
+/* 第二块试玩：左文右图，与首块同样式，只把刻度盘换成真实画面。
+   两块之间拉开距离，读起来是两个小节而不是一个。 */
+.play--single { margin-top: 32px; }
+.play--single .play__stage .screen { width: 100%; padding: 14px; }
 
 /* 竖版截图（模型接线板）：整张收窄居中，不裁切、不撑高。
    300px 是由两列配平定出来的：再宽右列会比左列高出百余像素。 */

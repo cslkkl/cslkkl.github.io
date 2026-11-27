@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>KKLCSL · 把想法，运行起来。</title>
-<meta name="description" content="KKLCSL 的作品现场：三款可以直接开一把的浏览器游戏，以及 Imagora、ARGUS-IX 星舰剖析、声之年轮、网页标注与 CPA 切换器。">
+<meta name="description" content="KKLCSL 的作品现场：可以直接开一把的浏览器游戏，在线可跑的代码安魂曲，以及 Imagora、声之年轮、网页标注与 CPA 切换器。">
 <link rel="canonical" href="https://toolboxonline.online/">
 <meta name="theme-color" content="#e0e5ec">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://toolboxonline.online/">
 <meta property="og:title" content="KKLCSL · 把想法，运行起来。">
-<meta property="og:description" content="三款可以直接开一把的浏览器游戏，以及 Imagora、ARGUS-IX 星舰剖析、声之年轮、网页标注与 CPA 切换器。">
+<meta property="og:description" content="可以直接开一把的浏览器游戏，在线可跑的代码安魂曲，以及 Imagora、声之年轮、网页标注与 CPA 切换器。">
 <meta property="og:image" content="https://toolboxonline.online/assets/sirocco.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="css/site.css">
@@ -48,7 +48,6 @@
         <div class="stage-meta">
           <div class="segment" role="group" aria-label="切换首屏项目">
             <button type="button" aria-pressed="true" data-k="rings">声之年轮</button>
-            <button type="button" aria-pressed="false" data-k="starship">星舰</button>
             <button type="button" aria-pressed="false" data-k="imagora">Imagora</button>
             <button type="button" aria-pressed="false" data-k="annotator">网页标注</button>
             <button type="button" aria-pressed="false" data-k="cpa">CPA</button>
@@ -61,7 +60,7 @@
     <section id="play" aria-labelledby="play-title">
       <div class="head">
         <h2 id="play-title">先开一把。</h2>
-        <p>三款都是跑在浏览器里的游戏，不用装、不用注册。前两款点开就玩，第三款是单文件 HTML，下载双击即可。</p>
+        <p>两款都是跑在浏览器里的游戏，不用装、不用注册。一款在这页直接发车，一款是单文件 HTML，下载双击即可。</p>
       </div>
 
       <div class="play">
@@ -92,50 +91,30 @@
         </div>
       </div>
 
-      <div class="play-more">
-
-        <article class="panel panel--flat" aria-labelledby="azimut-title">
-          <h3 id="azimut-title">在太阳落下去之前，飞过去。</h3>
-          <p>AZIMUT 风境 · 一架滑翔机，一条被风写的航路。</p>
-
-          <figure class="shot">
-            <button class="screen shot__zoom" type="button"
-                    data-zoom="assets/azimut.jpg"
-                    data-zoom-alt="AZIMUT 的飞行画面：滑翔机掠过沙丘与遗迹，右侧是手绘感的风境笔记，标着光门、晶体与岩体的得分"
-                    aria-label="放大查看 AZIMUT 的飞行画面">
-              <img src="assets/azimut.jpg" alt="AZIMUT 的飞行画面：滑翔机掠过沙丘与遗迹，右侧是手绘感的风境笔记" loading="lazy" decoding="async">
-            </button>
-            <figcaption>真实运行画面 · 沙丘、遗迹与漂浮群岛</figcaption>
-          </figure>
-
-          <p>自由探索或复航校准，两套记录分开记；机关按船坞、升流井、风拱分成九类二十处，地图本身是一串可以自己重敲的种子。</p>
-
+      <div class="play play--single">
+        <div class="play__copy">
+          <div class="roleline">双刃战士 · 纵目 · 个人作品 / 下载即玩</div>
+          <h3>一人一把刀，<br>守一个坑。</h3>
+          <p>两个三星堆纵目祭司，爬不到别处去。单文件 HTML，双击就能开打；两个人挤一个键盘，插上手柄则各控一人。</p>
+          <ul class="play__list">
+            <li><b>六阵递进</b>一档比一档厚，末阵是器心 · 纵目之主</li>
+            <li><b>十一种武器</b>七件近战、四件投掷，刀有耐久，挥到 0 就断</li>
+            <li><b>断网可打</b>不用起服务，也不读本地以外的任何东西</li>
+          </ul>
           <div class="rowbtns">
-            <a class="btn btn--sm btn--primary" href="https://zlzayn.site/azimut" target="_blank" rel="noopener">去飞一圈</a>
+            <a class="btn btn--primary" href="https://github.com/cslkkl/double-blade-zongmu" target="_blank" rel="noopener">下载开打</a>
           </div>
-        </article>
-
-        <article class="panel panel--flat" aria-labelledby="zongmu-title">
-          <h3 id="zongmu-title">一人一把刀，守一个坑。</h3>
-          <p>双刃战士 · 纵目 · 三星堆青铜面具下的双人清版。</p>
-
-          <figure class="shot">
-            <button class="screen shot__zoom" type="button"
+        </div>
+        <div class="play__stage">
+          <div class="screen">
+            <button class="screen__zoom" type="button"
                     data-zoom="assets/zongmu.jpg"
                     data-zoom-alt="纵目的第一阵：两个青铜纵目祭司站在祭祀坑里，坑后平台上挂着青铜钟与铜鼓，左侧是血条与武器耐久"
                     aria-label="放大查看纵目的第一阵画面">
               <img src="assets/zongmu.jpg" alt="纵目的第一阵：两个青铜纵目祭司站在祭祀坑里，坑后平台上挂着青铜钟与铜鼓" loading="lazy" decoding="async">
             </button>
-            <figcaption>真实运行画面 · 第一阵</figcaption>
-          </figure>
-
-          <p>单文件 HTML，双击就能开打；两个人挤一个键盘，插上手柄则各控一人。刀会断，断了先空手，得走过去再捡一把。</p>
-
-          <div class="rowbtns">
-            <a class="btn btn--sm btn--primary" href="https://github.com/cslkkl/double-blade-zongmu" target="_blank" rel="noopener">下载开打</a>
           </div>
-        </article>
-
+        </div>
       </div>
     </section>
 
@@ -227,29 +206,6 @@
               <a class="btn btn--sm" href="https://github.com/cslkkl/discography-showcase" target="_blank" rel="noopener">探索项目</a>
             </div>
             <p class="declaration">本页只演示周杰伦一位，项目共包含八位歌手。</p>
-          </div>
-
-          <!-- ARGUS-IX 星舰剖析 -->
-          <div class="panel panel--flat" aria-labelledby="starship-title">
-            <h3 id="starship-title">把一艘船，拆开看。</h3>
-            <p>ARGUS-IX · 深空战术巡洋舰，十三个部件。</p>
-
-            <figure class="shot">
-              <button class="screen shot__zoom" type="button"
-                      data-zoom="assets/starship.jpg"
-                      data-zoom-alt="ARGUS-IX 的剖析状态：十三个部件沿各自的轴向分离，每个部件都带引线与标签，左侧是部件清单与剖析系数"
-                      aria-label="放大查看 ARGUS-IX 的剖析状态">
-                <img src="assets/starship.jpg" alt="ARGUS-IX 的剖析状态：十三个部件沿各自的轴向分离，每个部件都带引线与标签" loading="lazy" decoding="async">
-              </button>
-              <figcaption>真实运行画面 · 剖析完成</figcaption>
-            </figure>
-
-            <p>没有任何模型文件。装甲是圆角截面沿轴放样算出来的，翼型沿展向放样，尾焰是跑在 GPU 上的湍流噪声。</p>
-
-            <div class="rowbtns">
-              <a class="btn btn--sm" href="https://github.com/cslkkl/starship-anatomy" target="_blank" rel="noopener">查看项目</a>
-            </div>
-            <p class="declaration">three.js 程序化建模，零构建、全离线；手势控制需授权摄像头。</p>
           </div>
 
           <!-- Imagora Desk -->
