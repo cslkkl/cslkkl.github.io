@@ -260,11 +260,14 @@ h1 b { display: block; color: var(--accent); font-weight: 600; }
 .dial__center strong { font-family: var(--mono); font-size: 40px; font-weight: 700; color: var(--accent); line-height: 1.05; letter-spacing: -0.02em; }
 .dial__center span { font-size: 10.5px; color: var(--muted); letter-spacing: 0.05em; max-width: 8.5em; }
 
-/* 首屏切换到截图时：凹陷屏 + 下方凹陷信息条，四种状态视觉重量一致 */
+/* 首屏切换到截图时：凹陷屏 + 下方凹陷信息条，四种状态视觉重量接近。
+   取景比例 1.8 是折中量出来的：三张真实截图原比例 2.30 / 2.11 / 2.50，
+   1.55 时 Imagora 画布横向裁掉 36%（左侧工具条整列不见了），
+   1.95 时裁得只剩 15% 但右栏比刻度盘轻了 100px。1.8 裁 21%，右栏 383 对 448。 */
 .stage__stack { display: grid; gap: 16px; width: 100%; }
 .stage .screen { width: 100%; margin: 0; }
 .stage .screen img {
-  aspect-ratio: 1.55;
+  aspect-ratio: 1.8;
   object-fit: cover;
   object-position: top center;
 }

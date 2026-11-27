@@ -16,7 +16,9 @@
 
   const stage = $("[data-stage]");
   const projectButtons = $$("[data-k]");
-  let currentProject = "rings";
+  // 首屏默认是 Imagora：首屏往下第一段就是作品区，那里已经是一张纵向排列的
+  // 画布截图；把刻度盘留成第二个可点态，避免首屏和正文都以年轮开场。
+  let currentProject = "imagora";
 
   const SHOTS = {
     imagora: {
@@ -433,17 +435,24 @@
 
   /* ================================================================ 初始化 */
 
+  // 首屏默认态不是年轮，所以先把舞台画出来，别等 JSON 回来才有东西看；
+  // 年轮数据到了再补刻度盘与下方小刻度盘。
+  renderStage(currentProject);
+
   fetch("data/year-rings.json")
     .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
     .then((data) => {
       RINGS = data.rings || [];
-      renderStage(currentProject);
       renderMinidial();
+      // 用户此刻若仍停在年轮态，用真实数据重画一次
+      if (currentProject === "rings") renderStage(currentProject);
       bindZoom($(".screen__zoom"));
     })
     .catch(() => {
-      // 数据失败也要可读：给出说明，其余作品仍可查看
-      stage.innerHTML = `<div class="screen"><div class="note">年轮数据未载入，其余作品仍可查看。</div></div>`;
+      // 数据失败也要可读：年轮态给出说明，其余作品仍可查看
       $("[data-mini-album]").textContent = "未载入";
+      if (currentProject === "rings") {
+        stage.innerHTML = `<div class="screen"><div class="note">年轮数据未载入，其余作品仍可查看。</div></div>`;
+      }
     });
 })();
