@@ -23,9 +23,9 @@
   <nav aria-label="主导航">
     <div class="brand">KKLCSL<em>PLAYGROUND</em></div>
     <div class="navlinks">
-      <a href="#play">试玩</a>
-      <a href="#tools">工具</a>
       <a href="#work">作品</a>
+      <a href="#tools">工具</a>
+      <a href="#play">试玩</a>
       <a href="#index">索引</a>
     </div>
   </nav>
@@ -36,8 +36,8 @@
     <header class="hero">
       <div>
         <h1>把想法，<b>运行起来。</b></h1>
-        <p>工具、游戏、图像、音乐。它们不该只剩一段说明，这里可以真的试一下。</p>
-        <a class="btn btn--primary" href="#play">先进一把游戏</a>
+        <p>工具、图像、音乐。它们不该只剩一段说明，这里可以真的试一下。</p>
+        <a class="btn btn--primary" href="#work">看看作品</a>
       </div>
 
       <div>
@@ -55,97 +55,6 @@
         </div>
       </div>
     </header>
-
-    <!-- ================= 试玩 ================= -->
-    <section id="play" aria-labelledby="play-title">
-      <div class="head">
-        <h2 id="play-title">先开一把。</h2>
-        <p>两款都是跑在浏览器里的游戏，不用装、不用注册。一款在这页直接发车，一款是单文件 HTML，下载双击即可。</p>
-      </div>
-
-      <div class="play">
-        <div class="play__copy">
-          <div class="roleline">SIROCCO · 个人作品 / 本站可直接试玩</div>
-          <h3>在浏览器里，<br>把车开出去。</h3>
-          <p>纸墨渲染的沙漠拉力。四张手工地图、五位不同性格的对手、真实抓地与氮气预算，全部跑在浏览器里，不用安装。</p>
-          <ul class="play__list">
-            <li><b>四种模式</b>三圈拉力、单车计时、冠军巡回、无边界自由漫游</li>
-            <li><b>冰面专图</b>抓地只剩三成，长距离甩尾按滑移角回能</li>
-            <li><b>起步判定</b>倒计时压线踩油门，完美起步弹射出发</li>
-          </ul>
-          <div class="rowbtns">
-            <a class="btn btn--primary" href="/sirocco/">开始驾驶</a>
-          </div>
-        </div>
-        <div class="play__stage" aria-hidden="true">
-          <div class="track">
-            <span class="track__ring track__ring--1"></span>
-            <span class="track__ring track__ring--2"></span>
-            <span class="track__ring track__ring--3"></span>
-            <span class="track__car"></span>
-            <div class="track__core">
-              <strong>SIROCCO</strong>
-              <span>沙脊 · 04 地图</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="play play--single">
-        <div class="play__copy">
-          <div class="roleline">双刃战士 · 纵目 · 个人作品 / 下载即玩</div>
-          <h3>一人一把刀，<br>守一个坑。</h3>
-          <p>两个三星堆纵目祭司，爬不到别处去。单文件 HTML，双击就能开打；两个人挤一个键盘，插上手柄则各控一人。</p>
-          <ul class="play__list">
-            <li><b>六阵递进</b>一档比一档厚，末阵是器心 · 纵目之主</li>
-            <li><b>十一种武器</b>七件近战、四件投掷，刀有耐久，挥到 0 就断</li>
-            <li><b>断网可打</b>不用起服务，也不读本地以外的任何东西</li>
-          </ul>
-          <div class="rowbtns">
-            <a class="btn btn--primary" href="https://github.com/cslkkl/double-blade-zongmu" target="_blank" rel="noopener">下载开打</a>
-          </div>
-        </div>
-        <div class="play__stage">
-          <div class="screen">
-            <button class="screen__zoom" type="button"
-                    data-zoom="assets/zongmu.jpg"
-                    data-zoom-alt="纵目的第一阵：两个青铜纵目祭司站在祭祀坑里，坑后平台上挂着青铜钟与铜鼓，左侧是血条与武器耐久"
-                    aria-label="放大查看纵目的第一阵画面">
-              <img src="assets/zongmu.jpg" alt="纵目的第一阵：两个青铜纵目祭司站在祭祀坑里，坑后平台上挂着青铜钟与铜鼓" loading="lazy" decoding="async">
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= 在线工具 ================= -->
-    <section id="tools" aria-labelledby="tools-title">
-      <div class="head">
-        <h2 id="tools-title">工具，也能直接用。</h2>
-        <p>不必下载：贴一个地址，几十秒后拿结果。跑在我自己的服务器上。</p>
-      </div>
-
-      <article class="imagora">
-        <div class="screen">
-          <button class="screen__zoom" type="button"
-                  data-zoom="assets/requiem.jpg"
-                  data-zoom-alt="代码安魂曲的判读结果：Kornia 拿到 91 分，旁边是最后提交、bus factor、贡献者、提交总数、享年与风险点，下面是三句话回答"
-                  aria-label="放大查看代码安魂曲的判读结果">
-            <img src="assets/requiem.jpg" alt="代码安魂曲的判读结果：91 分，六项指标与三句回答" loading="lazy" decoding="async">
-          </button>
-        </div>
-        <div class="copy">
-          <div class="roleline">CODE REQUIEM · 个人作品 / 在线可跑</div>
-          <h3>给一个仓库地址，<br>读它的生命体征。</h3>
-          <p>输入任意公开 Git 仓库，六维健康分全部由确定性算法算出；AI 只负责把指标写成一份能贴进交接单的话。活着的写遗嘱，断气的写悼词。</p>
-          <div class="rowbtns">
-            <a class="btn btn--sm btn--primary" href="http://110.41.59.97/requiem/" target="_blank" rel="noopener">直接试用</a>
-            <a class="btn btn--sm" href="https://github.com/cslkkl/code-requiem" target="_blank" rel="noopener">看源码</a>
-          </div>
-          <p class="declaration">部署在自有服务器；一次判读 10–90 秒，匿名 GitHub 配额对全站共享。</p>
-        </div>
-      </article>
-    </section>
 
     <!-- ================= 作品 ================= -->
     <section id="work" aria-labelledby="work-title">
@@ -347,6 +256,97 @@
             <p class="declaration">配图为虚构成员名与演示路由，不是真实会话。</p>
           </div>
 
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 在线工具 ================= -->
+    <section id="tools" aria-labelledby="tools-title">
+      <div class="head">
+        <h2 id="tools-title">工具，也能直接用。</h2>
+        <p>不必下载：贴一个地址，几十秒后拿结果。跑在我自己的服务器上。</p>
+      </div>
+
+      <article class="imagora">
+        <div class="screen">
+          <button class="screen__zoom" type="button"
+                  data-zoom="assets/requiem.jpg"
+                  data-zoom-alt="代码安魂曲的判读结果：Kornia 拿到 91 分，旁边是最后提交、bus factor、贡献者、提交总数、享年与风险点，下面是三句话回答"
+                  aria-label="放大查看代码安魂曲的判读结果">
+            <img src="assets/requiem.jpg" alt="代码安魂曲的判读结果：91 分，六项指标与三句回答" loading="lazy" decoding="async">
+          </button>
+        </div>
+        <div class="copy">
+          <div class="roleline">CODE REQUIEM · 个人作品 / 在线可跑</div>
+          <h3>给一个仓库地址，<br>读它的生命体征。</h3>
+          <p>输入任意公开 Git 仓库，六维健康分全部由确定性算法算出；AI 只负责把指标写成一份能贴进交接单的话。活着的写遗嘱，断气的写悼词。</p>
+          <div class="rowbtns">
+            <a class="btn btn--sm btn--primary" href="http://110.41.59.97/requiem/" target="_blank" rel="noopener">直接试用</a>
+            <a class="btn btn--sm" href="https://github.com/cslkkl/code-requiem" target="_blank" rel="noopener">看源码</a>
+          </div>
+          <p class="declaration">部署在自有服务器；一次判读 10–90 秒，匿名 GitHub 配额对全站共享。</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- ================= 试玩 ================= -->
+    <section id="play" aria-labelledby="play-title">
+      <div class="head">
+        <h2 id="play-title">先开一把。</h2>
+        <p>两款都是跑在浏览器里的游戏，不用装、不用注册。一款在这页直接发车，一款是单文件 HTML，下载双击即可。</p>
+      </div>
+
+      <div class="play">
+        <div class="play__copy">
+          <div class="roleline">SIROCCO · 个人作品 / 本站可直接试玩</div>
+          <h3>在浏览器里，<br>把车开出去。</h3>
+          <p>纸墨渲染的沙漠拉力。四张手工地图、五位不同性格的对手、真实抓地与氮气预算，全部跑在浏览器里，不用安装。</p>
+          <ul class="play__list">
+            <li><b>四种模式</b>三圈拉力、单车计时、冠军巡回、无边界自由漫游</li>
+            <li><b>冰面专图</b>抓地只剩三成，长距离甩尾按滑移角回能</li>
+            <li><b>起步判定</b>倒计时压线踩油门，完美起步弹射出发</li>
+          </ul>
+          <div class="rowbtns">
+            <a class="btn btn--primary" href="/sirocco/">开始驾驶</a>
+          </div>
+        </div>
+        <div class="play__stage" aria-hidden="true">
+          <div class="track">
+            <span class="track__ring track__ring--1"></span>
+            <span class="track__ring track__ring--2"></span>
+            <span class="track__ring track__ring--3"></span>
+            <span class="track__car"></span>
+            <div class="track__core">
+              <strong>SIROCCO</strong>
+              <span>沙脊 · 04 地图</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="play play--single">
+        <div class="play__copy">
+          <div class="roleline">双刃战士 · 纵目 · 个人作品 / 下载即玩</div>
+          <h3>一人一把刀，<br>守一个坑。</h3>
+          <p>两个三星堆纵目祭司，爬不到别处去。单文件 HTML，双击就能开打；两个人挤一个键盘，插上手柄则各控一人。</p>
+          <ul class="play__list">
+            <li><b>六阵递进</b>一档比一档厚，末阵是器心 · 纵目之主</li>
+            <li><b>十一种武器</b>七件近战、四件投掷，刀有耐久，挥到 0 就断</li>
+            <li><b>断网可打</b>不用起服务，也不读本地以外的任何东西</li>
+          </ul>
+          <div class="rowbtns">
+            <a class="btn btn--primary" href="https://github.com/cslkkl/double-blade-zongmu" target="_blank" rel="noopener">下载开打</a>
+          </div>
+        </div>
+        <div class="play__stage">
+          <div class="screen">
+            <button class="screen__zoom" type="button"
+                    data-zoom="assets/zongmu.jpg"
+                    data-zoom-alt="纵目的第一阵：两个青铜纵目祭司站在祭祀坑里，坑后平台上挂着青铜钟与铜鼓，左侧是血条与武器耐久"
+                    aria-label="放大查看纵目的第一阵画面">
+              <img src="assets/zongmu.jpg" alt="纵目的第一阵：两个青铜纵目祭司站在祭祀坑里，坑后平台上挂着青铜钟与铜鼓" loading="lazy" decoding="async">
+            </button>
+          </div>
         </div>
       </div>
     </section>
